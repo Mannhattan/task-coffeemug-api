@@ -1,0 +1,52 @@
+[
+    {
+        "id": "d0e29356-1eb3-449f-8fbe-7c4c4361ea59",
+        "name": "Robbins",
+        "price": 359.01
+    },
+    {
+        "id": "a1aba04c-4111-416e-9c22-e918b9435697",
+        "name": "Rice",
+        "price": 944.17
+    },
+    {
+        "id": "87b1d81f-000d-4172-8357-f0fdea695dc7",
+        "name": "Whitfield",
+        "price": 956.84
+    },
+    {
+        "id": "69b3bef0-29b7-49c3-ba5c-d2566eef553c",
+        "name": "Roth",
+        "price": 307.12
+    },
+    {
+        "id": "a3e9a6fa-8187-4619-bb9a-0e2a31b989e2",
+        "name": "Mcleod",
+        "price": 492.97
+    },
+    {
+        "id": "427487d7-8a39-40d1-a11c-e5dec0d7f138",
+        "name": "Conley",
+        "price": 1011.38
+    },
+    {
+        "id": "3f541e54-a7f9-4b47-a6d3-b22d0fdf25ab",
+        "name": "Estes",
+        "price": 1606.68
+    },
+    {
+        "id": "87953239-3ae7-4c8b-ba0e-58608ef1cee2",
+        "name": "Martinez",
+        "price": 1771.24
+    },
+    {
+        "id": "df97552b-31f4-480f-88d3-aa6633122157",
+        "name": "Aguirre",
+        "price": 1886.18
+    },
+    {
+        "id": "acb50ed4-006f-4df0-a42a-4715186e52f2",
+        "name": "Cox",
+        "price": 1422.73
+    }
+]

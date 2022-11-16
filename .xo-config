@@ -1,0 +1,33 @@
+{
+    "envs": [
+        "es2021"
+    ],
+    "semicolon": false,
+    "rules": {
+        "new-cap": "off",
+        "n/file-extension-in-import": "off",
+        "@typescript-eslint/object-curly-spacing": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "import/extensions": "off",
+        "unicorn/prevent-abbreviations": "warn",
+        "import/no-anonymous-default-export": "off",
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "no-undef": "off",
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "unicorn/filename-case": [
+            "error",
+            {
+                "cases": {
+                    "camelCase": true,
+                    "pascalCase": true
+                }
+            }
+        ]
+    }
+}

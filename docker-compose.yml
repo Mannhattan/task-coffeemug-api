@@ -1,0 +1,49 @@
+version: '3.1'
+
+services:
+  database_coffeemug-api:
+    container_name: database_coffeemug-api
+    image: mongo:latest
+    restart: always
+    # volumes:
+    #   - ${PWD}/database/volume:/data/db
+    networks:
+      - network_coffeemug-api
+    logging:
+      driver: "none"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${DB_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${DB_PASSWORD}
+      - MONGO_INITDB_DATABASE=${DB_INITIALDB}
+
+  seed_coffeemug-api:
+    container_name: seed_coffeemug-api
+    build: 
+      context: ./database/seed/.
+      args:
+        - DB_HOST=${DB_HOST}
+        - DB_USERNAME=${DB_USERNAME}
+        - DB_PASSWORD=${DB_PASSWORD}
+        - DB_INITIALDB=${DB_INITIALDB}
+    networks:
+      - network_coffeemug-api
+    depends_on:
+      - database_coffeemug-api
+
+  backend_coffeemug-api:
+    container_name: backend_coffeemug-api
+    ports:
+      - ${PORT}:${PORT}
+    build:
+      context: ./.
+      args:
+        - PORT=${PORT}
+    networks:
+      - network_coffeemug-api
+    restart: on-failure
+    depends_on:
+      - seed_coffeemug-api
+
+networks:
+  network_coffeemug-api:
+    driver: "bridge"

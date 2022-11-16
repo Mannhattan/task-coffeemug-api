@@ -1,0 +1,9 @@
+node_modules
+
+build/*
+!build/.gitkeep
+
+database/volume/*
+!database/volume/.gitkeep
+
+.env
