@@ -2,7 +2,7 @@
 
 This was a recruitment task that I went overboard with (as usual :facepalm:). It uses ExpressJs, NodeJS, Typescript, mongodb and docker-compose to start everything up without any hassle.
 Config is stored in `.env` file (one to rule them all) and propagated through the containers during build time.
-As a code formatter of choice I use [xojs](https://github.com/xojs/xo) configured for my own needs. If you want to use it seamlessly install vscode extension [xo](https://marketplace.visualstudio.com/items?itemName=samverschueren.linter-xo).
+As a code formatter of choice I use [xojs](https://github.com/xojs/xo) configured for my own needs (if you want to use it seamlessly install vscode extension [xo](https://marketplace.visualstudio.com/items?itemName=samverschueren.linter-xo)).
 
 
 The app consists of three containers:
@@ -26,28 +26,29 @@ The app consists of three containers:
 
 ## Available routes
 
-- GET /api/v1/products
-    gets all products
+- GET /api/v1/products - gets all products
 
-- GET /api/v1/products/:id
-    gets details about specific product
+- GET /api/v1/products/:id - gets details about specific product
 
-- POST /api/v1/products/
-    creates new product, saves it to database and returns it
+- POST /api/v1/products/ - creates new product, saves it to database and returns it
 
-- PUT /api/v1/products/:id
-    updates existing product and returns it
+- PUT /api/v1/products/:id - updates existing product and returns it
 
-- DELETE /api/v1/products/:id
-    removes existing product from database
+- DELETE /api/v1/products/:id - removes existing product from database
+
+---
+
+## Things that should be added
+
+- tests
+- security
+- logging
 
 ---
 
 ## Other things to note
 - all containers are connected in a network and only backend container exposes its port to external use
 - typescript lacks proper polish in some places
-- logging could be added
-- security could be added
 
 ---
 
